@@ -1,0 +1,19 @@
+{
+  "name": "ecommerce-app-mongo-stripe",
+  "version": "1.0.0",
+  "description": "An ecommerce app using mongodb for persistence and stripe payment gateway",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ywalakamar/ecommerce-app-mongo-stripe.git"
+  },
+  "author": "Kipruto Barno",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ywalakamar/ecommerce-app-mongo-stripe/issues"
+  },
+  "homepage": "https://github.com/ywalakamar/ecommerce-app-mongo-stripe#readme"
+}
