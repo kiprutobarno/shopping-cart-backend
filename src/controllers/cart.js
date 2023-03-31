@@ -12,7 +12,7 @@ const createCart = async (req, res) => {
 };
 
 const getCartByUserId = async (req, res) => {
-  const cart = await readOneById(req.params.id);
+  const cart = await readOneById(req.params.userId);
   res.status(200).send(cart);
 };
 
@@ -28,7 +28,7 @@ const updateCart = async (req, res) => {
 
 const deleteCart = async (req, res) => {
   const cart = await deleteOne(req.params.id);
-  res.status(200).send(ietm);
+  res.status(200).send(cart);
 };
 
 export { createCart, updateCart, deleteCart, getCartByUserId, getCarts };

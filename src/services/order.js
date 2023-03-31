@@ -1,8 +1,8 @@
-import Cart from "../models/Cart";
+import Order from "../models/Order";
 
 const save = async (data) => {
   try {
-    return { success: true, data: await new Cart(data).save() };
+    return { success: true, data: await new Order(data).save() };
   } catch (error) {
     return { success: false, error };
   }
@@ -10,16 +10,16 @@ const save = async (data) => {
 
 const readAll = async () => {
   try {
-    const carts = await Cart.find();
-    return { success: true, data: carts };
+    const orders = await Order.find();
+    return { success: true, data: orders };
   } catch (error) {
     return { success: false, error };
   }
 };
 
-const readOneById = async (userId) => {
+const readOneById = async (id) => {
   try {
-    return { success: true, data: await Cart.findOne({ userId }) };
+    return { success: true, data: await Order.find({ id }) };
   } catch (error) {
     return { success: false, error };
   }
@@ -29,7 +29,7 @@ const updateOne = async (id, reqdata) => {
   try {
     return {
       success: true,
-      data: await Cart.findByIdAndUpdate(id, { $set: reqdata }, { new: true }),
+      data: await Order.findByIdAndUpdate(id, { $set: reqdata }, { new: true }),
     };
   } catch (error) {
     return { success: false, error };
@@ -40,7 +40,7 @@ const deleteOne = async (id) => {
   try {
     return {
       success: true,
-      data: await Cart.findByIdAndDelete(id),
+      data: await Order.findByIdAndDelete(id),
     };
   } catch (error) {
     return { success: false, error };

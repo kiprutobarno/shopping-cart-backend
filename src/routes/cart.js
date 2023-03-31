@@ -9,9 +9,8 @@ import {
   deleteCart,
   getCarts,
   getCartByUserId,
-  getCartByUserId,
   updateCart,
-} from "../controllers/cart";
+} from "../controllers/cart";  
 
 const cartRouter = new Router();
 
