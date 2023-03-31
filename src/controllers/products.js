@@ -13,7 +13,6 @@ const createProduct = async (req, res) => {
 
 const getProductById = async (req, res) => {
   const product = await readOneById(req.params.id);
-  console.log(product);
   res.status(200).send(product);
 };
 
