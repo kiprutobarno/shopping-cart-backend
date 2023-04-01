@@ -13,8 +13,7 @@ const readAll = async (qnew, qcategory) => {
     let products;
     if (qnew) {
       products = await Product.find().sort({ createdAt: -1 }).limit(1);
-    }
-    if (qcategory) {
+    } else if (qcategory) {
       products = await Product.find({ categories: { $in: [qcategory] } });
     } else {
       products = await Product.find();
