@@ -4,6 +4,7 @@ import userRouter from "./routes/user";
 import { productRouter } from "./routes/products";
 import { orderRouter } from "./routes/order";
 import { cartRouter } from "./routes/cart";
+import { incomeRouter } from "./routes/income";
 
 const createApp = (app) => {
   app.use(express.json());
@@ -14,6 +15,7 @@ const createApp = (app) => {
   app.use(productRouter);
   app.use(orderRouter);
   app.use(cartRouter);
+  app.use(incomeRouter);
 };
 
 export default createApp;
