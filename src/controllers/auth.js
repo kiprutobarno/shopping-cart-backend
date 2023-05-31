@@ -17,7 +17,6 @@ const createUser = async (req, res) => {
 
 const userLogin = async (req, res) => {
   const { user, success } = await readOne(req.body.username);
-  console.log(user);
   const { password, ...others } = user;
 
   if (req.body.password !== decrypt(user.password)) {
@@ -31,6 +30,7 @@ const userLogin = async (req, res) => {
 
   const results = format({
     id: user._id,
+    user: user.username,
     token,
   });
 
